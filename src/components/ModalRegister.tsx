@@ -132,7 +132,7 @@ export default function ModalRegister() {
                 <label className="form-label">First name</label>
                 <input
                   className={"form-control" + (fnameError ? " is-invalid" : "")}
-                  onChange={(e) => { setFname(e.target.value); setFnameError(false); }}
+                  onChange={inputFnameOnChange}
                   value={fname}
                 />
                 <div className="invalid-feedback">Invalid first name</div>
@@ -141,7 +141,7 @@ export default function ModalRegister() {
                 <label className="form-label">Last name</label>
                 <input
                   className={"form-control" + (lnameError ? " is-invalid" : "")}
-                  onChange={(e) => { setLname(e.target.value); setLnameError(false); }}
+                  onChange={inputLnameOnChange}
                   value={lname}
                 />
                 <div className="invalid-feedback">Invalid last name</div>
@@ -153,7 +153,7 @@ export default function ModalRegister() {
               <label className="form-label">Plan</label>
               <select
                 className={"form-select" + (planError ? " is-invalid" : "")}
-                onChange={(e) => { setPlan(e.target.value); setPlanError(false); }}
+                onChange={selectPlanOnChange}
                 value={plan}
               >
                 <option value="">Please select..</option>
